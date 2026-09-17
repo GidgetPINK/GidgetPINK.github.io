@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Apryl Smith — AI Video Production</title>
+<title>Apryl Smith | AI Video Creator</title>
 <meta name="description" content="AI video production: screenplay, keyframes, animation, narration, original score and edit. One person, end to end. Selected work and process.">
 
-<meta property="og:title" content="Apryl Smith — AI Video Production">
+<meta property="og:title" content="Apryl Smith | AI Video Creator">
 <meta property="og:description" content="Narrative video written, generated, scored and cut by one person. Selected work and process.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="images/og-card.jpg">
@@ -270,6 +270,42 @@ h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.02;margin:0;le
 .strip .cell:nth-child(5){background:linear-gradient(140deg,var(--cyan),var(--acid))}
 .strip .cell img{width:100%;height:100%;object-fit:cover}
 
+/* ---------- commercials ---------- */
+.spot{
+  display:grid;
+  grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);
+  gap:clamp(1.75rem,4vw,3.25rem);
+  align-items:start;
+  padding-bottom:clamp(2.5rem,5vw,4rem);
+  margin-bottom:clamp(2.5rem,5vw,4rem);
+  border-bottom:3px solid var(--ink);
+}
+.spot:last-of-type{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.spot h3{font-size:clamp(1.5rem,2.6vw,2.15rem);margin-bottom:.4rem}
+.spot p{margin:0 0 1.5rem;max-width:44ch}
+.spot .specs{border-top:2px solid rgba(0,0,0,.28)}
+.spot .specs li{border-bottom:2px solid rgba(0,0,0,.28)}
+.spot .specs .k{color:var(--magenta)}
+.spot .brandline{color:var(--ink);margin:.1rem 0 1.1rem !important}
+.spot .specs .v{opacity:1}
+.vframe{
+  position:relative;
+  aspect-ratio:16/9;
+  background:var(--ink);
+  border:4px solid var(--ink);
+  cursor:pointer;
+  overflow:hidden;
+}
+.vframe img{width:100%;height:100%;object-fit:cover;transition:transform 350ms ease}
+.vframe:hover img{transform:scale(1.03)}
+.vframe video{position:absolute;inset:0;width:100%;height:100%;background:var(--ink)}
+.runtime{
+  position:absolute;right:0;bottom:0;z-index:4;
+  background:var(--ink);color:var(--paper);
+  font-size:.72rem;font-weight:700;letter-spacing:.1em;
+  padding:.42rem .8rem .46rem;
+}
+
 /* ---------- product placement ---------- */
 .placement{
   display:grid;
@@ -436,6 +472,7 @@ footer .script{font-family:var(--script);font-size:1.25rem;color:var(--acid)}
   <nav>
     <a href="#top">Home</a>
     <a href="#work">Work</a>
+    <a href="#spots">Commercials</a>
     <a href="#reference">Reference</a>
     <a href="#brands">Brands</a>
     <a href="#process">Process</a>
@@ -559,6 +596,54 @@ footer .script{font-family:var(--script);font-size:1.25rem;color:var(--acid)}
         <div class="cell"><img loading="lazy" decoding="async" src="images/work2-03.jpg" alt="" onerror="this.remove()"></div>
         <div class="cell"><img loading="lazy" decoding="async" src="images/work2-04.jpg" alt="" onerror="this.remove()"></div>
         <div class="cell"><img loading="lazy" decoding="async" src="images/work2-05.jpg" alt="" onerror="this.remove()"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="band band-acid" id="spots">
+  <div class="wrap">
+    <div class="band-head">
+      <p class="kicker">COMMERCIAL WORK</p>
+      <h2>One spot, twice.</h2>
+      <p>Both of these sell my own novel, and I wrote the script and built the music bed for each. The first one was my early attempt. The second is the same job done again after I understood what was wrong with the first. They are here together on purpose, because the distance between them is the part worth showing.</p>
+    </div>
+
+    <article class="spot">
+      <div class="vframe" data-src="images/commercial-river.mp4" role="button" tabindex="0" aria-label="Play the current version of the A River Flows commercial">
+        <img loading="lazy" decoding="async" src="images/commercial-river-poster.jpg" alt="Still from the current A River Flows commercial: a woman reading on a tablet in a lamplit living room" onerror="this.remove()">
+        <div class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></div>
+        <p class="runtime">0:30</p>
+      </div>
+      <div>
+        <h3>A River Flows</h3>
+        <p class="brandline">Current version</p>
+        <p>Thirty seconds, built in 4K. The room is lit rather than just visible: practical lamps, a dark kitchen behind, depth built into the frame. One subject instead of two, so the shot has somewhere to rest. The living room is a location plate I already had, which is the whole point of building plates.</p>
+        <ul class="specs">
+          <li><span class="k">RUNTIME</span><span class="v">30 seconds, 4K</span></li>
+          <li><span class="k">SUBJECT</span><span class="v">A River Flows, my own novel</span></li>
+          <li><span class="k">WROTE</span><span class="v">Script and music bed</span></li>
+          <li><span class="k">ROLE</span><span class="v">Writer, director, editor</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="spot">
+      <div class="vframe" data-src="images/commercial-river-v1.mp4" role="button" tabindex="0" aria-label="Play the first version of the A River Flows commercial">
+        <img loading="lazy" decoding="async" src="images/commercial-river-v1-poster.jpg" alt="Still from the first A River Flows commercial: two women talking on a couch in flat daylight" onerror="this.remove()">
+        <div class="play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></div>
+        <p class="runtime">0:15</p>
+      </div>
+      <div>
+        <h3>A River Flows</h3>
+        <p class="brandline">First version</p>
+        <p>My first attempt at the same brief. Flat overhead light, two subjects competing for the frame, and a cover card dropped in at the end rather than designed into the shot. I am showing it because knowing what is wrong with your own work is most of what gets it fixed, and the second version is what that fix looks like.</p>
+        <ul class="specs">
+          <li><span class="k">RUNTIME</span><span class="v">15 seconds, 4K</span></li>
+          <li><span class="k">SUBJECT</span><span class="v">A River Flows, my own novel</span></li>
+          <li><span class="k">WROTE</span><span class="v">Script and music bed</span></li>
+          <li><span class="k">ROLE</span><span class="v">Writer, director, editor</span></li>
+        </ul>
       </div>
     </article>
   </div>
@@ -919,8 +1004,27 @@ document.getElementById('yr').textContent = new Date().getFullYear();
 })();
 
 function loadVideo(el){
+  if(el.dataset.loaded) return;
+
+  // self-hosted file
+  var src = el.getAttribute('data-src');
+  if(src){
+    el.dataset.loaded = '1';
+    var v = document.createElement('video');
+    v.src = src;
+    v.controls = true;
+    v.autoplay = true;
+    v.playsInline = true;
+    v.preload = 'auto';
+    el.innerHTML = '';
+    el.appendChild(v);
+    el.style.cursor = 'default';
+    return;
+  }
+
+  // youtube
   var id = el.getAttribute('data-yt');
-  if(!id || el.dataset.loaded) return;
+  if(!id) return;
   el.dataset.loaded = '1';
   var f = document.createElement('iframe');
   f.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
@@ -954,7 +1058,7 @@ function loadVideo(el){
   targets.forEach(function(t){ obs.observe(t); });
 })();
 
-document.querySelectorAll('.player').forEach(function(p){
+document.querySelectorAll('.player, .vframe').forEach(function(p){
   p.addEventListener('click', function(){ loadVideo(p); });
   p.addEventListener('keydown', function(e){
     if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); loadVideo(p); }
